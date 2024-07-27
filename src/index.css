@@ -1,13 +1,401 @@
+/* General Styles */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f8f9fa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header and Footer */
+.header, .footer {
+  background-color: #ffcccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.header .logo, .footer .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header .nav, .footer .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .nav a, .footer .nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header .nav button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header .nav button:hover {
+  background-color: #c82333;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Video Chat Page Styles */
+.video-chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-header .profile-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-header .report-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-header .report-btn:hover {
+  background-color: #c82333;
+}
+
+.remote-video-frame {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: #ddd;
+}
+
+.local-video-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin: 20px;
+  background-color: #ddd;
+}
+
+.chat-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.chat-controls button {
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.chat-controls button:hover {
+  background-color: #0056b3;
+}
+
+.chat-btn {
+  background-color: #6c757d;
+}
+
+.chat-btn:hover {
+  background-color: #5a6268;
+}
+
+.skip-btn {
+  background-color: #ffc107;
+}
+
+.skip-btn:hover {
+  background-color: #e0a800;
+}
+
+.like-btn {
+  background-color: #28a745;
+}
+
+.like-btn:hover {
+  background-color: #218838;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Profile Page Styles */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+.profile-container .profile-info {
+  width: 80%;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.profile-container .profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-container .profile-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile-container .profile-info .edit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-container .profile-info .edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.profile-container .profile-info .save-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-container .profile-info .save-btn:hover {
+  background-color: #218838;
+}
+
+/* Profile Setup Page Styles */
+.profile-setup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-setup-container input, .profile-setup-container textarea {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.profile-setup-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-setup-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Login and Register Page Styles */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-container form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.auth-container form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-container form button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-container form button:hover {
+  background-color: #218838;
+}
+
+/* Chat History Page Styles */
+.chat-history-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.chat-history-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.chat-history-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chat-history-container ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-history-container ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.chat-history-container ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Settings Page Styles */
+.settings-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.settings-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.settings-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-container form input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.settings-container form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.settings-container form button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional Styling for Remote and Local Video Frames */
+.remote-video-frame {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: #ddd;
+}
+
+.local-video-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin: 20px;
+  background-color: #ddd;
 }
